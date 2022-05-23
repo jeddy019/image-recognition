@@ -63,7 +63,7 @@ function ImageLinkForm() {
   const onFileSubmit = (e) => {
     e.preventDefault();
     if (fileObj === null) {
-      return alert("Please choose an image to upload");
+      return alert("Please select an image to upload");
     }
     setLoading(true);
     setPredictions([]);
