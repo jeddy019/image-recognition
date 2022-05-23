@@ -13,9 +13,9 @@ function Navbar() {
             <li>
               <p onClick={() => onRouteChange("about")}>About</p>
             </li>
-            <li>
+            {/* <li>
               <p onClick={() => onRouteChange("register")}>Register</p>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
@@ -38,23 +38,23 @@ function Navbar() {
       </nav>
     );
   }
-  if (route === "register") {
-    return (
-      <nav className="navbar">
-        <div className="nav-center">
-          <img src={logo} alt="project logo" className="logo" />
-          <ul className="nav-links">
-            <li>
-              <p onClick={() => onRouteChange("signin")}>Home</p>
-            </li>
-            <li>
-              <p onClick={() => onRouteChange("about")}>About</p>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    );
-  }
+  // if (route === "register") {
+  //   return (
+  //     <nav className="navbar">
+  //       <div className="nav-center">
+  //         <img src={logo} alt="project logo" className="logo" />
+  //         <ul className="nav-links">
+  //           <li>
+  //             <p onClick={() => onRouteChange("signin")}>Home</p>
+  //           </li>
+  //           <li>
+  //             <p onClick={() => onRouteChange("about")}>About</p>
+  //           </li>
+  //         </ul>
+  //       </div>
+  //     </nav>
+  //   );
+  // }
   if (route === "image") {
     return (
       <nav className="navbar">
@@ -81,9 +81,9 @@ function Navbar() {
             <li>
               <p onClick={() => onRouteChange("signin")}>Home</p>
             </li>
-            <li>
+            {/* <li>
               <p onClick={() => onRouteChange("register")}>Register</p>
-            </li>
+            </li> */}
             <li>
               <p onClick={() => onRouteChange("signin")}>Sign In</p>
             </li>

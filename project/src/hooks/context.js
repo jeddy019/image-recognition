@@ -5,7 +5,7 @@ const AppContext = createContext();
 function AppProvider({ children }) {
   const [predictions, setPredictions] = useState([]);
   const [imageToPredict, setImageToPredict] = useState("");
-  const [route, setRoute] = useState("signin");
+  const [route, setRoute] = useState("about");
 
   const onRouteChange = (route) => {
     return setRoute(route);

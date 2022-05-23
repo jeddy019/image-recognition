@@ -3,6 +3,9 @@ import { useGlobalContext } from "../hooks/context";
 import axios from "axios";
 import isURL from "validator/lib/isURL";
 import Loader from "./Loader";
+import SubmitSmall from "./SubmitSmall";
+import SubmitBig from "./SubmitBig";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 function ImageLinkForm() {
   const [imageUrl, setImageUrl] = useState("");
@@ -11,6 +14,8 @@ function ImageLinkForm() {
 
   const { setImageToPredict, setPredictions, onRouteChange } =
     useGlobalContext();
+
+  const isMobile = useMediaQuery("(min-width: 992px)");
 
   let options = {
     protocols: ["http", "https", "ftp"],
@@ -33,7 +38,7 @@ function ImageLinkForm() {
   const onFormSubmit = (e) => {
     e.preventDefault();
     if (isURL(imageUrl, options) === false) {
-      return alert("Please enter a valid url");
+      return alert("Please enter a valid image address");
     }
     setPredictions([]);
     setImageToPredict(imageUrl);
@@ -58,7 +63,7 @@ function ImageLinkForm() {
   const onFileSubmit = (e) => {
     e.preventDefault();
     if (fileObj === null) {
-      return alert("Please select an image to upload");
+      return alert("Please choose an image to upload");
     }
     setLoading(true);
     setPredictions([]);
@@ -98,23 +103,19 @@ function ImageLinkForm() {
     return (
       <section className="margin section search">
         <form className="search-form" onSubmit={onFormSubmit}>
-          <p>place your image url below</p>
+          <p>place your image address</p>
           <div className="form-control">
             <input type="text" onChange={onInputChange} />
-            <button type="submit" className="btn btn-primary btn-details">
-              analyze
-            </button>
+            {isMobile ? <SubmitBig /> : <SubmitSmall />}
           </div>
         </form>
         <br />
         <h2 className="text-center">OR</h2>
         <form className="search-form" onSubmit={onFileSubmit}>
-          <p>upload an image below</p>
+          <p>upload an image (jpeg/jpg/png)</p>
           <div className="form-control">
             <input type="file" onChange={onFileUpload} />
-            <button type="submit" className="btn btn-primary btn-details">
-              analyze
-            </button>
+            {isMobile ? <SubmitBig /> : <SubmitSmall />}
           </div>
         </form>
       </section>

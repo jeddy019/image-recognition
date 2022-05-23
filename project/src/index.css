@@ -272,9 +272,9 @@ Input Forms
 
 input[type=file]::file-selector-button {
   text-transform: uppercase;
-  letter-spacing: var(--mainSpacing);
+  letter-spacing: 0.2rem;
   border: 2px solid var(--primaryColor);
-  padding: 0.45rem 0.8rem;
+  padding: 0.45rem 0.4rem;
   display: inline-block;
   transition: var(--mainTransition);
   cursor: pointer;
@@ -286,9 +286,27 @@ input[type=file]::file-selector-button {
   border-color: transparent;
 }
 
-input[type=file]::file-selector-button:hover {
-  background: #314522;
+@media (max-width: 992px) {
+  input[type=file]::file-selector-button {
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: var(--mainBorderRadius);
+    display: inline-block;
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+    border-color: transparent;
+    letter-spacing: 0.1rem;
+    border: 1px solid var(--primaryColor);
+    padding: 0.5rem 0.4rem;
+  }
+}
 
+.small-btn {
+  letter-spacing: 0.1rem;
+  border: 1px solid var(--primaryColor);
+  padding: 0.2rem 0.4rem;
 }
 
 /* 
@@ -304,6 +322,16 @@ Image Prediction Section
   width: 100%;
 }
 
+.start-btn {
+   text-align: center;
+  padding: 3rem 3rem;
+  margin-left: 7.2rem;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  width: 50%;
+}
+
 .prediction {
   width: var(--smallWidth);
   max-width: var(--fullWidth);
@@ -314,9 +342,7 @@ Image Prediction Section
   border-radius: var(--mainBorderRadius);
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
-  height: 20rem;
-  object-fit: cover;
-  margin-top: -10px;
+  height: auto;
 }
 
 .prediction img:hover {
@@ -336,8 +362,9 @@ Image Prediction Section
   }
 
   .prediction img {
-    height: 25rem;
+    height: 22rem;
     margin-top: -100px;
+    object-fit: cover;
   }
 }
 
