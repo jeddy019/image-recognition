@@ -35,11 +35,11 @@ export default function About() {
       </p>
       <p>
         Thanks again for checking out this App and I hope you enjoy it! If you
-        are looking to get ahold of me, you can send me an email at
+        are looking to get ahold of me, you can send me an email at{" "}
         <a href="mailto:jeddy019@gmail.com">jeddy019@gmail.com</a>
-        {"."} You can also find me on{" "}
+        {"."} You can also find me on my Github page at{" "}
         <a href="https://github.com/jeddy019" target="_blank" rel="noreferrer">
-          my Github page
+          github.com/jeddy019
         </a>
         {"."}
       </p>
