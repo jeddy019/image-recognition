@@ -34,12 +34,13 @@ export default function About() {
         and videos), and it's own server using Node-JS and Express-JS
       </p>
       <p>
-        Thanks again for checking out this App and I hope you enjoy it! You can
-        always find me on{" "}
+        Thanks again for checking out this App and I hope you enjoy it! If you
+        are looking to get ahold of me, you can send me an email at
+        <a href="mailto:jeddy019@gmail.com">jeddy019@gmail.com</a>
+        {"."} You can also find me on{" "}
         <a href="https://github.com/jeddy019" target="_blank" rel="noreferrer">
           my Github page
-        </a>{" "}
-        and <a href="mailto:jeddy019@gmail.com">my email</a>
+        </a>
         {"."}
       </p>
       <button
